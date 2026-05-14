@@ -1,0 +1,107 @@
+name: Sync exact Netlify deploy
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/sync-netlify-deploy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Replace repository files from live deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_URL="https://mukarovskypes.com"
+
+          rm -f ./*.html ./readme.txt ./README.md
+          rm -rf ./assets ./images
+
+          files=(
+            "index.html"
+            "canicross.html"
+            "dogtrek.html"
+            "partneri.html"
+            "merch.html"
+            "discipliny.html"
+            "prihlasky.html"
+            "pravidla.html"
+            "galerie.html"
+            "dekujeme.html"
+            "informace.html"
+            "readme.txt"
+            "misto.html"
+            "kontakt.html"
+            "program.html"
+            "assets/style.css"
+            "images/mukapeslogo.png"
+            "images/tricko-cervene.png"
+            "images/galerie-2022/galerie-2022-19.jpg"
+            "images/galerie-2022/galerie-2022-09.jpg"
+            "images/galerie-2022/galerie-2022-20.jpg"
+            "images/galerie-2022/galerie-2022-08.jpg"
+            "images/galerie-2022/galerie-2022-18.jpg"
+            "images/ksiltovky.jpeg"
+            "images/galerie-2022/galerie-2022-12.jpg"
+            "images/galerie-2022/galerie-2022-05.jpg"
+            "images/galerie-2022/galerie-2022-04.jpg"
+            "images/galerie-2022/galerie-2022-11.jpg"
+            "images/galerie-2022/galerie-2022-06.jpg"
+            "images/galerie-2022/galerie-2022-07.jpg"
+            "images/galerie-2022/galerie-2022-13.jpg"
+            "images/galerie-2022/galerie-2022-10.jpg"
+            "images/galerie-2022/galerie-2022-03.jpg"
+            "images/galerie-2022/galerie-2022-17.jpg"
+            "images/galerie-2022/galerie-2022-02.jpg"
+            "images/galerie-2022/galerie-2022-16.jpg"
+            "images/galerie-2022/galerie-2022-14.jpg"
+            "images/galerie-2022/galerie-2022-01.jpg"
+            "images/galerie-2022/galerie-2022-15.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-18.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-19.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-09.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-08.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-10.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-20.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-11.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-04.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-05.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-12.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-17.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-13.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-07.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-06.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-02.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-16.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-14.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-03.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-01.jpg"
+            "images/galerie-2022/nahledy/galerie-2022-15.jpg"
+          )
+
+          for file in "${files[@]}"; do
+            mkdir -p "$(dirname "$file")"
+            curl -fL "$BASE_URL/$file" -o "$file"
+          done
+
+      - name: Commit synced files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Sync exact Netlify deploy"
+            git push
+          fi
