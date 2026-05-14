@@ -1,1 +1,77 @@
-<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kontakt | Mukařovský pes</title><link rel="stylesheet" href="assets/style.css"></head><body><header><div class="container nav"><a class="brand" href="index.html"><img src="images/MukapesLOGO.svg" alt="Logo"><span>Mukařovský pes</span></a><nav><ul><li><a href="index.html">Úvod</a></li><li><a href="informace.html">Informace</a></li><li><a href="program.html">Program</a></li><li><a href="merch.html">Merch</a></li><li><a href="galerie.html">Galerie</a></li><li><a class="active" href="kontakt.html">Kontakt</a></li></ul></nav></div></header><main><section><div class="container split"><div class="info-box"><div class="eyebrow">Kontakt</div><h1>Napište nám</h1><p class="lead">Kontakt pro účastníky, partnery, merch i praktické dotazy k akci.</p><p><strong>E-mail:</strong><br><a href="mailto:info@mukarovskypes.cz">info@mukarovskypes.cz</a></p><p><strong>Místo:</strong><br>louka u obecního úřadu Mukařov, Praha-východ</p></div><div class="info-box"><h2>Novinky e-mailem</h2><form name="novinky" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="dekujeme.html"><input type="hidden" name="form-name" value="novinky"><p class="hidden"><label>Nechte prázdné:<input name="bot-field"></label></p><label>E-mail<input type="email" name="email" required></label><button class="btn" type="submit">Odebírat novinky</button></form></div></div></section></main><footer><div class="container footer-grid"><div><img src="images/MukapesLOGO.svg" alt="Logo"><h3>Mukařovský pes</h3></div><div>info@mukarovskypes.cz</div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt a novinky | Mukařovský pes</title>
+  <meta name="description" content="Kontakt na pořadatele a odběr novinek k akci Mukařovský pes." />
+  <meta name="theme-color" content="#e4332f" />
+  <meta property="og:title" content="Kontakt a novinky | Mukařovský pes" />
+  <meta property="og:description" content="Kontakt na pořadatele a odběr novinek k akci Mukařovský pes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a aria-label='Mukařovský pes – domů' class='brand' href='/'>
+        <img src="images/MukapesLOGO.png" alt="Logo Mukařovský pes" />
+        <span>Mukařovský pes</span>
+      </a>
+      <input class="menu-toggle-input" type="checkbox" id="menu-toggle" aria-hidden="true" />
+      <label class="menu-toggle" for="menu-toggle" aria-label="Otevřít hlavní menu">☰</label>
+      <nav aria-label="Hlavní navigace">
+        <ul>
+          <li><a href='/informace'>Informace</a></li>
+          <li><a href='/misto'>Místo</a></li>
+          <li><a href='/discipliny'>Disciplíny</a></li>
+          <li><a href='/program'>Program</a></li>
+          <li><a href='/pravidla'>Pravidla</a></li>
+          <li><a href='/merch'>Merch</a></li>
+          <li><a href='/galerie'>Galerie</a></li>
+          <li><a href='/partneri'>Partneři</a></li>
+          <li><a href='/prihlasky'>Přihlášky</a></li>
+          <li><a aria-current='page' class='active' href='/kontakt'>Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class='btn' href='/prihlasky'>Přihlásit se</a>
+    </div>
+  </header>
+
+  <main id="top">
+<section id="newsletter">
+<div class="container">
+<div class="newsletter">
+<div class="eyebrow">📧 Novinky e-mailem</div>
+<h2>Nechte si poslat informace o akci</h2>
+<p>Pošleme vám důležité novinky: spuštění registrace, finální program, informace o startovném a praktické pokyny před akcí.</p>
+<form action="dekujeme.html" class="newsletter-form" data-netlify="true" method="POST" name="novinky" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="novinky"/>
+<p class="netlify-hidden"><label>Nechte prázdné: <input name="bot-field"/></label></p>
+<input name="email" placeholder="vas@email.cz" required="" type="email"/>
+<button class="btn" type="submit">Odebírat novinky</button>
+</form>
+<p class="tiny-note" style="color:rgba(255,255,255,0.62);">Odesláním souhlasíte s kontaktováním ohledně akce Mukařovský pes. E-mail použijeme pouze pro informace k akci Mukařovský pes.</p>
+</div>
+</div>
+</section>
+  </main>
+
+<footer id="kontakt">
+<div class="container footer-grid">
+<div>
+<img alt="Logo Mukařovský pes" src="images/MukapesLOGO.png"/>
+<h3>Mukařovský pes</h3>
+<p>Celodenní akce pro pejskaře v Mukařově.</p>
+</div>
+<div>
+<strong>Kontakt</strong><br/>
+        e-mail: info@mukarovskypes.cz<br/>
+        místo: louka u obecního úřadu Mukařov, Praha-východ
+      </div>
+<a class='btn' href='/prihlasky'>Přihlásit se</a>
+</div>
+</footer>
+</body>
+</html>

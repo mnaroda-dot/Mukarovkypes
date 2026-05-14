@@ -1,1 +1,173 @@
-<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Merch | Mukařovský pes</title><link rel="stylesheet" href="assets/style.css"></head><body><header><div class="container nav"><a class="brand" href="index.html"><img src="images/MukapesLOGO.svg" alt="Logo"><span>Mukařovský pes</span></a><nav><ul><li><a href="index.html">Úvod</a></li><li><a href="discipliny.html">Disciplíny</a></li><li><a href="program.html">Program</a></li><li><a class="active" href="merch.html">Merch</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav></div></header><main><section><div class="container section-title"><h1>Merch</h1><p>Podpoř akci stylově. Rezervace slouží jako předběžná objednávka.</p></div><div class="container merch-grid"><article class="merch-item"><img src="images/tricko-cervene.svg" alt="Tričko"><div class="merch-content"><h3>Tričko Mukařovský pes</h3><div class="price">Cena bude upřesněna</div><p>Varianty: červená / černá, velikosti S–3XL.</p></div></article><article class="merch-item"><img src="images/ksiltovky.svg" alt="Kšiltovka"><div class="merch-content"><h3>Kšiltovka</h3><div class="price">Cena bude upřesněna</div><p>Varianty: bílá / černá.</p></div></article><article class="merch-item"><img src="images/MukapesLOGO.svg" alt="Doplňky"><div class="merch-content"><h3>Doplňky</h3><div class="price">Cena bude upřesněna</div><p>Doplňkové balíčky s motivem akce.</p></div></article></div></section><section><div class="container info-box"><h2>Rezervace merche</h2><form name="rezervace-merche" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="dekujeme.html"><input type="hidden" name="form-name" value="rezervace-merche"><p class="hidden"><label>Nechte prázdné:<input name="bot-field"></label></p><label>Jméno<input name="jmeno" required></label><label>E-mail<input type="email" name="email" required></label><label>Produkt<select name="produkt"><option>Tričko</option><option>Kšiltovka</option><option>Doplňky</option></select></label><label>Poznámka<textarea name="poznamka" rows="4"></textarea></label><button class="btn" type="submit">Rezervovat merch</button></form></div></section></main><footer><div class="container footer-grid"><div><img src="images/MukapesLOGO.svg" alt="Logo"><h3>Mukařovský pes</h3></div><div>info@mukarovskypes.cz</div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merch | Mukařovský pes</title>
+  <meta name="description" content="Merch Mukařovský pes a předběžná rezervace triček, kšiltovek a doplňků." />
+  <meta name="theme-color" content="#e4332f" />
+  <meta property="og:title" content="Merch | Mukařovský pes" />
+  <meta property="og:description" content="Merch Mukařovský pes a předběžná rezervace triček, kšiltovek a doplňků." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a aria-label='Mukařovský pes – domů' class='brand' href='/'>
+        <img src="images/MukapesLOGO.png" alt="Logo Mukařovský pes" />
+        <span>Mukařovský pes</span>
+      </a>
+      <input class="menu-toggle-input" type="checkbox" id="menu-toggle" aria-hidden="true" />
+      <label class="menu-toggle" for="menu-toggle" aria-label="Otevřít hlavní menu">☰</label>
+      <nav aria-label="Hlavní navigace">
+        <ul>
+          <li><a href='/informace'>Informace</a></li>
+          <li><a href='/misto'>Místo</a></li>
+          <li><a href='/discipliny'>Disciplíny</a></li>
+          <li><a href='/program'>Program</a></li>
+          <li><a href='/pravidla'>Pravidla</a></li>
+          <li><a aria-current='page' class='active' href='/merch'>Merch</a></li>
+          <li><a href='/galerie'>Galerie</a></li>
+          <li><a href='/partneri'>Partneři</a></li>
+          <li><a href='/prihlasky'>Přihlášky</a></li>
+          <li><a href='/kontakt'>Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class='btn' href='/prihlasky'>Přihlásit se</a>
+    </div>
+  </header>
+
+  <main id="top">
+<section id="merch">
+<div class="container">
+<div class="section-title">
+<h2>Merch</h2>
+<p>Podpoř akci stylově. Obleč si Mukařovského psa a buď součástí smečky. Rezervace níže slouží jako předběžná objednávka.</p>
+</div>
+<div class="merch-grid">
+<article class="merch-item">
+<img alt="Červené tričko Mukařovský pes" src="images/tricko-cervene.png"/>
+<div class="merch-content">
+<h3>Tričko Mukařovský pes</h3>
+<div class="price">Cena bude upřesněna</div>
+<p>Tričko s výrazným logem akce. Dostupné varianty: červená / černá, velikosti S–3XL.</p>
+</div>
+</article>
+<article class="merch-item">
+<img alt="Kšiltovka Mukařovský pes" src="images/ksiltovky.jpeg"/>
+<div class="merch-content">
+<h3>Kšiltovka</h3>
+<div class="price">Cena bude upřesněna</div>
+<p>Stylová kšiltovka pro fanoušky i pořadatele. Varianty: bílá / černá.</p>
+</div>
+</article>
+<article class="merch-item">
+<img alt="Doplňky Mukařovský pes" src="images/MukapesLOGO.png"/>
+<div class="merch-content">
+<h3>Doplňky Mukařovský pes</h3>
+<div class="price">Cena bude upřesněna</div>
+<p>Doplňkové balíčky s motivem Mukařovského psa. Varianty: balíček 1 / balíček 2 / balíček 3.</p>
+</div>
+</article>
+</div>
+<div class="form-wrap" style="margin-top:28px;">
+<div class="info-box">
+<div class="eyebrow">Rezervace merche</div>
+<h2>Chci si něco zamluvit</h2>
+<p>Vyplňte formulář a my vám merch připravíme k vyzvednutí na místě. Po odeslání se rezervace uloží přímo ve správě webu na Netlify.</p>
+<p class="tiny-note">Rezervace je nezávazná. Slouží k odhadu velikostí, barev a počtu kusů před akcí.</p>
+</div>
+<form action="dekujeme.html" data-netlify="true" method="POST" name="rezervace-merche" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="rezervace-merche"/>
+<p class="netlify-hidden"><label>Nechte prázdné: <input name="bot-field"/></label></p>
+<label for="merch-name">Jméno a příjmení</label>
+<input id="merch-name" name="jmeno" placeholder="Jan Novák" required="" type="text"/>
+<label for="merch-email">E-mail</label>
+<input id="merch-email" name="email" placeholder="jan@email.cz" required="" type="email"/>
+<label for="merch-product">Co si chcete rezervovat?</label>
+<select id="merch-product" name="produkt">
+<option>Tričko Mukařovský pes</option>
+<option>Kšiltovka Mukařovský pes</option>
+<option>Doplňky Mukařovský pes</option>
+</select>
+<label for="tshirt-color">Barva trička</label>
+<select id="tshirt-color" name="barva_tricka">
+<option>Netýká se</option>
+<option>Červená</option>
+<option>Černá</option>
+</select>
+<label for="tshirt-size">Velikost trička</label>
+<select id="tshirt-size" name="velikost_tricka">
+<option>Netýká se</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+</select>
+<label for="cap-variant">Varianta kšiltovky</label>
+<select id="cap-variant" name="varianta_ksiltovky">
+<option>Netýká se</option>
+<option>Bílá</option>
+<option>Černá</option>
+</select>
+<label for="accessory-package">Varianta doplňků</label>
+<select id="accessory-package" name="varianta_doplnku">
+<option>Netýká se</option>
+<option>Balíček 1</option>
+<option>Balíček 2</option>
+<option>Balíček 3</option>
+</select>
+<label for="merch-quantity">Počet kusů</label>
+<input id="merch-quantity" min="1" name="pocet_kusu" type="number" value="1"/>
+<label for="merch-pickup">Vyzvednutí</label>
+<select id="merch-pickup" name="vyzvednuti">
+<option>Na místě v den akce</option>
+<option>Domluvit individuálně před akcí</option>
+</select>
+<label for="merch-note">Poznámka</label>
+<textarea id="merch-note" name="poznamka" placeholder="Další velikosti, více položek, dotaz..."></textarea>
+<label style="display:flex; gap:10px; align-items:flex-start; font-weight:700;">
+<input name="souhlas" required="" style="width:auto; margin-top:5px;" type="checkbox"/>
+<span>Souhlasím s tím, aby mě pořadatel kontaktoval kvůli rezervaci merche a souvisejícím informacím k akci.</span>
+</label>
+<button class="btn" type="submit">Rezervovat merch</button>
+</form>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container split">
+<div class="info-box">
+<div class="eyebrow">Merch &amp; tým</div>
+<h2>Viditelní v terénu i na fotkách.</h2>
+<p>Jednotné logo krásně funguje na tričkách, kšiltovkách i dalších materiálech. Na webu může vzniknout samostatná galerie nebo stránka pro partnery a sponzory.</p>
+</div>
+<div class="photo-card">
+<img alt="Kšiltovka s logem Mukařovský pes" src="images/ksiltovky.jpeg"/>
+</div>
+</div>
+</section>
+  </main>
+
+<footer id="kontakt">
+<div class="container footer-grid">
+<div>
+<img alt="Logo Mukařovský pes" src="images/MukapesLOGO.png"/>
+<h3>Mukařovský pes</h3>
+<p>Celodenní akce pro pejskaře v Mukařově.</p>
+</div>
+<div>
+<strong>Kontakt</strong><br/>
+        e-mail: info@mukarovskypes.cz<br/>
+        místo: louka u obecního úřadu Mukařov, Praha-východ
+      </div>
+<a class='btn' href='/prihlasky'>Přihlásit se</a>
+</div>
+</footer>
+</body>
+</html>
