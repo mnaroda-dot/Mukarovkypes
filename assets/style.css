@@ -388,6 +388,33 @@
       border: 1px solid var(--line);
       box-shadow: 0 12px 30px rgba(0,0,0,0.06);
     }
+    .form-hint {
+      margin: 0 0 16px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .field-note {
+      margin: -8px 0 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .product-options {
+      margin: 6px 0 18px;
+      padding: 14px 14px 2px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fffdf9;
+      display: none;
+    }
+    .product-options.is-active {
+      display: block;
+    }
+    .product-options legend {
+      padding: 0 8px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--muted);
+    }
 
     label {
       display: block;
