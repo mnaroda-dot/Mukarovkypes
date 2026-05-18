@@ -72,7 +72,7 @@
 </div>
 </article>
 </div>
-<div class="form-wrap" style="margin-top:28px;">
+<div class="form-wrap merch-form-wrap">
 <div class="info-box">
 <div class="eyebrow">Rezervace merche</div>
 <h2>Chci si něco zamluvit</h2>
@@ -94,7 +94,7 @@
 <option value="Kšiltovka Mukařovský pes">Kšiltovka Mukařovský pes</option>
 <option value="Doplňky Mukařovský pes">Doplňky Mukařovský pes</option>
 </select>
-<p class="field-note">Po výběru produktu zobrazíme jen relevantní varianty.</p>
+<p class="field-note" id="product-help">Po výběru produktu zobrazíme jen relevantní varianty a označíme je jako povinné.</p>
 <fieldset class="product-options" data-product="Tričko Mukařovský pes" disabled>
 <legend>Upřesnění pro tričko</legend>
 <label for="tshirt-color">Barva trička</label>
@@ -142,8 +142,8 @@
 </select>
 <label for="merch-note">Poznámka</label>
 <textarea id="merch-note" name="poznamka" placeholder="Další velikosti, více položek, dotaz..."></textarea>
-<label style="display:flex; gap:10px; align-items:flex-start; font-weight:700;">
-<input name="souhlas" required="" style="width:auto; margin-top:5px;" type="checkbox"/>
+<label class="consent-row">
+<input name="souhlas" required="" type="checkbox"/>
 <span>Souhlasím s tím, aby mě pořadatel kontaktoval kvůli rezervaci merche a souvisejícím informacím k akci.</span>
 </label>
 <button class="btn" type="submit">Rezervovat merch</button>
@@ -185,6 +185,11 @@
   (() => {
     const productSelect = document.getElementById('merch-product');
     const groups = document.querySelectorAll('.product-options');
+    const productRequirements = {
+      'Tričko Mukařovský pes': ['tshirt-color', 'tshirt-size'],
+      'Kšiltovka Mukařovský pes': ['cap-variant'],
+      'Doplňky Mukařovský pes': ['accessory-package']
+    };
 
     const toggleGroups = () => {
       const selectedProduct = productSelect.value;
@@ -192,6 +197,17 @@
         const isActive = group.dataset.product === selectedProduct;
         group.disabled = !isActive;
         group.classList.toggle('is-active', isActive);
+        group.querySelectorAll('select').forEach((select) => {
+          select.required = false;
+        });
+      });
+
+      const requiredFields = productRequirements[selectedProduct] || [];
+      requiredFields.forEach((id) => {
+        const field = document.getElementById(id);
+        if (field) {
+          field.required = true;
+        }
       });
     };
 

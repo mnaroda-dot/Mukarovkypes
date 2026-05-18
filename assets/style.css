@@ -380,6 +380,9 @@
       gap: 28px;
       align-items: start;
     }
+    .merch-form-wrap {
+      margin-top: 28px;
+    }
 
     form {
       background: white;
@@ -414,6 +417,17 @@
       font-size: 0.9rem;
       font-weight: 800;
       color: var(--muted);
+    }
+    .consent-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: 700;
+    }
+    .consent-row input[type="checkbox"] {
+      width: auto;
+      margin-top: 5px;
+      margin-bottom: 0;
     }
 
     label {
