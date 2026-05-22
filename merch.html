@@ -72,7 +72,7 @@
 </div>
 </article>
 </div>
-<div class="form-wrap" style="margin-top:28px;">
+<div class="form-wrap merch-form-wrap">
 <div class="info-box">
 <div class="eyebrow">Rezervace merche</div>
 <h2>Chci si něco zamluvit</h2>
@@ -82,25 +82,30 @@
 <form action='dekujeme' method='POST' name='rezervace-merche'>
 <input name="form-name" type="hidden" value="rezervace-merche"/>
 <p class="netlify-hidden"><label>Nechte prázdné: <input name="bot-field"/></label></p>
+<p class="form-hint">Položky označené <strong>*</strong> jsou povinné.</p>
 <label for="merch-name">Jméno a příjmení</label>
 <input id="merch-name" name="jmeno" placeholder="Jan Novák" required="" type="text"/>
 <label for="merch-email">E-mail</label>
 <input id="merch-email" name="email" placeholder="jan@email.cz" required="" type="email"/>
-<label for="merch-product">Co si chcete rezervovat?</label>
-<select id="merch-product" name="produkt">
-<option>Tričko Mukařovský pes</option>
-<option>Kšiltovka Mukařovský pes</option>
-<option>Doplňky Mukařovský pes</option>
+<label for="merch-product">Co si chcete rezervovat? *</label>
+<select id="merch-product" name="produkt" required>
+<option selected value="">Vyberte produkt</option>
+<option value="Tričko Mukařovský pes">Tričko Mukařovský pes</option>
+<option value="Kšiltovka Mukařovský pes">Kšiltovka Mukařovský pes</option>
+<option value="Doplňky Mukařovský pes">Doplňky Mukařovský pes</option>
 </select>
+<p class="field-note" id="product-help">Po výběru produktu zobrazíme jen relevantní varianty a označíme je jako povinné.</p>
+<fieldset class="product-options" data-product="Tričko Mukařovský pes" disabled>
+<legend>Upřesnění pro tričko</legend>
 <label for="tshirt-color">Barva trička</label>
 <select id="tshirt-color" name="barva_tricka">
-<option>Netýká se</option>
+<option selected value="">Vyberte barvu</option>
 <option>Červená</option>
 <option>Černá</option>
 </select>
 <label for="tshirt-size">Velikost trička</label>
 <select id="tshirt-size" name="velikost_tricka">
-<option>Netýká se</option>
+<option selected value="">Vyberte velikost</option>
 <option>S</option>
 <option>M</option>
 <option>L</option>
@@ -108,19 +113,26 @@
 <option>2XL</option>
 <option>3XL</option>
 </select>
+</fieldset>
+<fieldset class="product-options" data-product="Kšiltovka Mukařovský pes" disabled>
+<legend>Upřesnění pro kšiltovku</legend>
 <label for="cap-variant">Varianta kšiltovky</label>
 <select id="cap-variant" name="varianta_ksiltovky">
-<option>Netýká se</option>
+<option selected value="">Vyberte variantu</option>
 <option>Bílá</option>
 <option>Černá</option>
 </select>
+</fieldset>
+<fieldset class="product-options" data-product="Doplňky Mukařovský pes" disabled>
+<legend>Upřesnění pro doplňky</legend>
 <label for="accessory-package">Varianta doplňků</label>
 <select id="accessory-package" name="varianta_doplnku">
-<option>Netýká se</option>
+<option selected value="">Vyberte balíček</option>
 <option>Balíček 1</option>
 <option>Balíček 2</option>
 <option>Balíček 3</option>
 </select>
+</fieldset>
 <label for="merch-quantity">Počet kusů</label>
 <input id="merch-quantity" min="1" name="pocet_kusu" type="number" value="1"/>
 <label for="merch-pickup">Vyzvednutí</label>
@@ -130,8 +142,8 @@
 </select>
 <label for="merch-note">Poznámka</label>
 <textarea id="merch-note" name="poznamka" placeholder="Další velikosti, více položek, dotaz..."></textarea>
-<label style="display:flex; gap:10px; align-items:flex-start; font-weight:700;">
-<input name="souhlas" required="" style="width:auto; margin-top:5px;" type="checkbox"/>
+<label class="consent-row">
+<input name="souhlas" required="" type="checkbox"/>
 <span>Souhlasím s tím, aby mě pořadatel kontaktoval kvůli rezervaci merche a souvisejícím informacím k akci.</span>
 </label>
 <button class="btn" type="submit">Rezervovat merch</button>
@@ -169,5 +181,39 @@
 <a class='btn' href='/prihlasky'>Přihlásit se</a>
 </div>
 </footer>
+<script>
+  (() => {
+    const productSelect = document.getElementById('merch-product');
+    const groups = document.querySelectorAll('.product-options');
+    const productRequirements = {
+      'Tričko Mukařovský pes': ['tshirt-color', 'tshirt-size'],
+      'Kšiltovka Mukařovský pes': ['cap-variant'],
+      'Doplňky Mukařovský pes': ['accessory-package']
+    };
+
+    const toggleGroups = () => {
+      const selectedProduct = productSelect.value;
+      groups.forEach((group) => {
+        const isActive = group.dataset.product === selectedProduct;
+        group.disabled = !isActive;
+        group.classList.toggle('is-active', isActive);
+        group.querySelectorAll('select').forEach((select) => {
+          select.required = false;
+        });
+      });
+
+      const requiredFields = productRequirements[selectedProduct] || [];
+      requiredFields.forEach((id) => {
+        const field = document.getElementById(id);
+        if (field) {
+          field.required = true;
+        }
+      });
+    };
+
+    productSelect.addEventListener('change', toggleGroups);
+    toggleGroups();
+  })();
+</script>
 </body>
 </html>
