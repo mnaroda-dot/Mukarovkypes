@@ -297,6 +297,26 @@
 
     .card p { margin: 0; color: var(--muted); }
 
+    .contact-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-cards .card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-line {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-weight: 800;
+    }
+
+    .contact-line a {
+      color: var(--red-dark);
+    }
+
     .program {
       background: #171717;
       color: white;
