@@ -459,6 +459,122 @@
       gap: 28px;
       align-items: start;
     }
+
+    .route-panel {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .route-map-card,
+    .route-details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .route-map-placeholder {
+      min-height: 360px;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 12px;
+      padding: 32px;
+      text-align: center;
+      background:
+        linear-gradient(90deg, rgba(23,23,23,0.05) 1px, transparent 1px),
+        linear-gradient(rgba(23,23,23,0.05) 1px, transparent 1px),
+        #fff7ea;
+      background-size: 34px 34px;
+    }
+
+    .route-map-mark {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      font-size: 2rem;
+    }
+
+    .route-map-placeholder strong {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .route-map-placeholder span,
+    .route-details p {
+      color: var(--muted);
+    }
+
+    .route-details {
+      padding: 34px;
+    }
+
+    .route-details h3 {
+      margin: 0 0 14px;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .route-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .route-facts div {
+      padding: 16px;
+      border-radius: 20px;
+      background: #fff7ea;
+      border: 1px solid var(--line);
+    }
+
+    .route-facts span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .route-facts strong {
+      display: block;
+      margin-top: 6px;
+      line-height: 1.15;
+    }
+
+    .route-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn.is-disabled {
+      background: #d7d1c8;
+      color: #5f5a52;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+
+    .btn.is-disabled:hover {
+      transform: none;
+      background: #d7d1c8;
+      box-shadow: none;
+    }
+
     .merch-form-wrap {
       margin-top: 28px;
     }
@@ -804,7 +920,7 @@
       }
 
       .menu-toggle-input:checked ~ nav ul { display: flex; }
-      .hero-grid, .split, .form-wrap { grid-template-columns: 1fr; }
+      .hero-grid, .split, .form-wrap, .route-panel { grid-template-columns: 1fr; }
       .cards, .merch-grid, .stats, .gallery-years, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(4, 1fr); }
       .merch-action-grid { grid-template-columns: repeat(2, 1fr); }
@@ -823,6 +939,7 @@
       .newsletter { padding: 28px; }
       .newsletter-form { grid-template-columns: 1fr; }
       .time-row { grid-template-columns: 1fr; }
+      .route-facts { grid-template-columns: 1fr; }
       .section-title { display: block; }
       .section-title p { margin-top: 14px; }
       h1 { font-size: 3.2rem; }
