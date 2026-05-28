@@ -453,6 +453,12 @@
       color: var(--muted);
     }
 
+    .compact-list {
+      padding-left: 20px;
+      margin: 14px 0;
+      color: var(--muted);
+    }
+
     .form-wrap {
       display: grid;
       grid-template-columns: 0.82fr 1.18fr;
