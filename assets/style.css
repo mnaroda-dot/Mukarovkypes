@@ -201,7 +201,7 @@
       position: relative;
       min-height: 520px;
       border-radius: var(--radius);
-      background: linear-gradient(145deg, #171717 0%, #2d2d2d 54%, #111 100%);
+      background: linear-gradient(145deg, var(--red) 0%, #c92724 54%, var(--red-dark) 100%);
       box-shadow: var(--shadow);
       overflow: hidden;
       display: grid;
