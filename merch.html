@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Merch | Mukařovský pes</title>
-  <meta name="description" content="Merch Mukařovský pes a předběžná rezervace triček, kšiltovek a doplňků." />
+  <meta name="description" content="Objednejte si trička a kšiltovky Mukařovský pes. Jednoduchá závazná objednávka s vyzvednutím na akci nebo po individuální domluvě." />
   <meta name="theme-color" content="#e4332f" />
   <meta property="og:title" content="Merch | Mukařovský pes" />
-  <meta property="og:description" content="Merch Mukařovský pes a předběžná rezervace triček, kšiltovek a doplňků." />
+  <meta property="og:description" content="Objednejte si trička a kšiltovky Mukařovský pes. Jednoduchá závazná objednávka s vyzvednutím na akci nebo po individuální domluvě." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="cs_CZ" />
   <link rel="stylesheet" href="assets/style.css" />
@@ -38,174 +38,70 @@
   </header>
 
   <main id="top">
-<section id="merch">
-<div class="container">
-<div class="section-title">
-<h2>Merch</h2>
-<p>Podpoř akci stylově. Obleč si Mukařovského psa a buď součástí smečky. Rezervace níže slouží jako předběžná objednávka.</p>
-</div>
-<div class="merch-grid">
-<article class="merch-item">
-<img alt="Červené tričko Mukařovský pes" src="images/tricko-cervene.png"/>
-<div class="merch-content">
-<h3>Červené tričko</h3>
-<div class="price">Cena 390,-</div>
-<p>Tričko s výrazným logem akce. Dostupné velikosti S–3XL.</p>
-</div>
-</article>
-<article class="merch-item">
-<img alt="Černé tričko Mukařovský pes" src="images/triko-cerne.jpg"/>
-<div class="merch-content">
-<h3>Černé tričko</h3>
-<div class="price">Cena 390,-</div>
-<p>Černá varianta trička s bílým motivem Mukařovský pes. Dostupné velikosti S–3XL.</p>
-</div>
-</article>
-<article class="merch-item">
-<img alt="Kšiltovka Mukařovský pes" src="images/ksiltovky.jpeg"/>
-<div class="merch-content">
-<h3>Kšiltovka</h3>
-<div class="price">Cena 290,-</div>
-<p>Stylová kšiltovka pro fanoušky i pořadatele. Dostupná také v bílé variantě.</p>
-</div>
-</article>
-<article class="merch-item">
-<img alt="Bílá kšiltovka Mukařovský pes" src="images/ksiltovka-bila.jpg"/>
-<div class="merch-content">
-<h3>Bílá kšiltovka</h3>
-<div class="price">Cena 290,-</div>
-<p>Bílá kšiltovka s červeným logem Mukařovský pes.</p>
-</div>
-</article>
-<article class="merch-item">
-<img alt="Doplňky Mukařovský pes" src="images/mukapeslogo.png"/>
-<div class="merch-content">
-<h3>Doplňky Mukařovský pes</h3>
-<div class="price">Cena bude upřesněna</div>
-<p>Doplňkové balíčky s motivem Mukařovského psa. Varianty: balíček 1 = Hrnek červený + klíčenka/ balíček 2 = Propiska, blok A5 / balíček 3.</p>
-</div>
-</article>
-</div>
-<div class="form-wrap merch-form-wrap">
-<div class="info-box">
-<div class="eyebrow">Rezervace merche</div>
-<h2>Chci si něco zamluvit</h2>
-<p>Vyplňte formulář a my vám merch připravíme k vyzvednutí na místě a nebo domluvíme předání jiným způsobem.</p>
-<p class="tiny-note">Rezervace je nezávazná. Slouží k odhadu velikostí, barev a počtu kusů před akcí.</p>
-</div>
-<form action='dekujeme' method='POST' name='rezervace-merche'>
-<input name="form-name" type="hidden" value="rezervace-merche"/>
-<p class="netlify-hidden"><label>Nechte prázdné: <input name="bot-field"/></label></p>
-<p class="form-hint">Položky označené <strong>*</strong> jsou povinné.</p>
-<label for="merch-name">Jméno a příjmení</label>
-<input id="merch-name" name="jmeno" placeholder="Jan Novák" required="" type="text"/>
-<label for="merch-email">E-mail</label>
-<input id="merch-email" name="email" placeholder="jan@email.cz" required="" type="email"/>
-<label for="merch-product">Co si chcete rezervovat? *</label>
-<select id="merch-product" name="produkt" required>
-<option selected value="">Vyberte produkt</option>
-<option value="Tričko Mukařovský pes">Tričko Mukařovský pes</option>
-<option value="Kšiltovka Mukařovský pes">Kšiltovka Mukařovský pes</option>
-<option value="Doplňky Mukařovský pes">Doplňky Mukařovský pes</option>
-</select>
-<p class="field-note" id="product-help">Po výběru produktu zobrazíme jen relevantní varianty a označíme je jako povinné.</p>
-<fieldset class="product-options" data-product="Tričko Mukařovský pes" disabled>
-<legend>Upřesnění pro tričko</legend>
-<label for="tshirt-color">Barva trička</label>
-<select id="tshirt-color" name="barva_tricka">
-<option selected value="">Vyberte barvu</option>
-<option>Červená</option>
-<option>Černá</option>
-</select>
-<label for="tshirt-size">Velikost trička</label>
-<select id="tshirt-size" name="velikost_tricka">
-<option selected value="">Vyberte velikost</option>
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-<option>2XL</option>
-<option>3XL</option>
-</select>
-</fieldset>
-<fieldset class="product-options" data-product="Kšiltovka Mukařovský pes" disabled>
-<legend>Upřesnění pro kšiltovku</legend>
-<label for="cap-variant">Varianta kšiltovky</label>
-<select id="cap-variant" name="varianta_ksiltovky">
-<option selected value="">Vyberte variantu</option>
-<option>Bílá</option>
-<option>Černá</option>
-</select>
-</fieldset>
-<fieldset class="product-options" data-product="Doplňky Mukařovský pes" disabled>
-<legend>Upřesnění pro doplňky</legend>
-<label for="accessory-package">Varianta doplňků</label>
-<select id="accessory-package" name="varianta_doplnku">
-<option selected value="">Vyberte balíček</option>
-<option>Balíček 1</option>
-<option>Balíček 2</option>
-<option>Balíček 3</option>
-</select>
-</fieldset>
-<label for="merch-quantity">Počet kusů</label>
-<input id="merch-quantity" min="1" name="pocet_kusu" type="number" value="1"/>
-<label for="merch-pickup">Vyzvednutí</label>
-<select id="merch-pickup" name="vyzvednuti">
-<option>Na místě v den akce</option>
-<option>Domluvit individuálně před akcí</option>
-</select>
-<label for="merch-note">Poznámka</label>
-<textarea id="merch-note" name="poznamka" placeholder="Další velikosti, více položek, dotaz..."></textarea>
-<label class="consent-row">
-<input name="souhlas" required="" type="checkbox"/>
-<span>Souhlasím s tím, aby mě pořadatel kontaktoval kvůli rezervaci merche a souvisejícím informacím k akci.</span>
-</label>
-<button class="btn" type="submit">Rezervovat merch</button>
-</form>
-</div>
-<div class="merch-action-gallery">
-<div class="gallery-preview-header">
-<div>
-<div class="eyebrow">Merch v akci</div>
-<h3>Na lidech, na místě, mezi psy.</h3>
-</div>
-<p>Malá ochutnávka z akce, kde je merch vidět přímo v terénu.</p>
-</div>
-<div class="merch-action-grid">
-<img alt="Červené tričko Mukařovský pes na akci se psem" src="images/merch-akce/merch-v-akci-01.jpg"/>
-<img alt="Merch a registrace ve stánku Mukařovský pes" src="images/merch-akce/merch-v-akci-02.jpg"/>
-<img alt="Pořadatelé v červených tričkách Mukařovský pes při předávání cen" src="images/merch-akce/merch-v-akci-03.jpg"/>
-<img alt="Červená trička Mukařovský pes u pódia a stánku" src="images/merch-akce/merch-v-akci-04.jpg"/>
-<img alt="Účastnice se psem a pořadatelé v tričkách Mukařovský pes" src="images/merch-akce/merch-v-akci-05.jpg"/>
-<img alt="Červené tričko Mukařovský pes v detailu na akci" src="images/merch-akce/merch-v-akci-06.jpg"/>
-<img alt="Detail trička Mukařovský pes při rozhovoru" src="images/merch-akce/merch-v-akci-07.jpg"/>
-<img alt="Psi na louce během akce Mukařovský pes" src="images/merch-akce/merch-v-akci-08.jpg"/>
-<img alt="Předávání ceny s pořadateli v tričkách Mukařovský pes" src="images/merch-akce/merch-v-akci-09.jpg"/>
-<img alt="Pořadatelé v červených tričkách u pódia Mukařovský pes" src="images/merch-akce/merch-v-akci-10.jpg"/>
-<img alt="Tým Mukařovský pes v tričkách během programu pro děti" src="images/merch-akce/merch-v-akci-11.jpg"/>
-<img alt="Moderování programu s viditelným tričkem Mukařovský pes" src="images/merch-akce/merch-v-akci-12.jpg"/>
-<img alt="Účastník v tričku Mukařovský pes se psem" src="images/merch-akce/merch-v-akci-13.jpg"/>
-<img alt="Stánek a merch Mukařovský pes během předávání balíčků" src="images/merch-akce/merch-v-akci-14.jpg"/>
-<img alt="Pořadatelé v tričkách Mukařovský pes na louce" src="images/merch-akce/merch-v-akci-15.jpg"/>
-</div>
-</div>
-</div>
-</section>
+    <section class="shop-hero">
+      <div class="container shop-hero-grid">
+        <div>
+          <div class="eyebrow">🐾 Oficiální merch</div>
+          <h1>Oblečte se<br/>do naší smečky.</h1>
+          <p class="lead">Pár poctivých kousků, které dělají radost i mimo závodní trať. Vyberte variantu, vložte ji do košíku a odešlete závaznou objednávku.</p>
+          <a class="btn" href="#produkty">Vybrat merch ↓</a>
+        </div>
+        <div class="shop-hero-photo">
+          <img src="images/tricko-cervene.png" alt="Červené tričko Mukařovský pes" />
+          <div class="shop-hero-badge"><strong>Od 290 Kč</strong><span>Osobní vyzvednutí</span></div>
+        </div>
+      </div>
+    </section>
 
-<section>
-<div class="container split">
-<div class="info-box">
-<div class="eyebrow">Merch &amp; tým</div>
-<h2>Viditelní v terénu i na fotkách.</h2>
-<p>Jednotné logo krásně funguje na tričkách, kšiltovkách i dalších materiálech. Zde je galerie jak to sluší jako psovy uši když s námi sladíte merch.</p>
-</div>
-<div class="photo-card">
-<img alt="Kšiltovka s logem Mukařovský pes" src="images/ksiltovky.jpeg"/>
-</div>
-</div>
-</section>
+    <section id="produkty" class="shop-section">
+      <div class="container">
+        <div class="section-title">
+          <div><div class="eyebrow">Malá, ale chlupatá kolekce</div><h2>Vyberte si svůj kousek</h2></div>
+          <p>U každého produktu zvolte variantu a počet kusů. Do jedné objednávky můžete přidat více položek.</p>
+        </div>
+        <div class="shop-layout">
+          <div class="shop-products">
+            <article class="shop-product" data-name="Červené tričko" data-price="390">
+              <div class="shop-product-image"><img src="images/tricko-cervene.png" alt="Červené tričko s logem Mukařovský pes" /><span class="stock-badge">Skladem</span></div>
+              <div class="shop-product-copy"><div class="product-topline"><h3>Červené tričko</h3><strong>390 Kč</strong></div><p>Výrazná červená klasika s logem akce. Velikosti S–3XL.</p><div class="product-buy"><label>Velikost<select class="variant" aria-label="Velikost červeného trička"><option value="">Vyberte</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option></select></label><label>Počet<input class="quantity" type="number" min="1" max="10" value="1" aria-label="Počet červených triček" /></label><button class="btn add-to-cart" type="button">Přidat</button></div></div>
+            </article>
+            <article class="shop-product" data-name="Černé tričko" data-price="390">
+              <div class="shop-product-image"><img src="images/triko-cerne.jpg" alt="Černé tričko s logem Mukařovský pes" /><span class="stock-badge">Skladem</span></div>
+              <div class="shop-product-copy"><div class="product-topline"><h3>Černé tričko</h3><strong>390 Kč</strong></div><p>Univerzální černá varianta s kontrastním bílým motivem.</p><div class="product-buy"><label>Velikost<select class="variant" aria-label="Velikost černého trička"><option value="">Vyberte</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option></select></label><label>Počet<input class="quantity" type="number" min="1" max="10" value="1" aria-label="Počet černých triček" /></label><button class="btn add-to-cart" type="button">Přidat</button></div></div>
+            </article>
+            <article class="shop-product" data-name="Černá kšiltovka" data-price="290">
+              <div class="shop-product-image"><img src="images/ksiltovky.jpeg" alt="Černá kšiltovka Mukařovský pes" /><span class="stock-badge">Skladem</span></div>
+              <div class="shop-product-copy"><div class="product-topline"><h3>Černá kšiltovka</h3><strong>290 Kč</strong></div><p>Nastavitelná kšiltovka s logem pro závodní i volné dny.</p><div class="product-buy"><input class="variant" type="hidden" value="Nastavitelná" /><label>Počet<input class="quantity" type="number" min="1" max="10" value="1" aria-label="Počet černých kšiltovek" /></label><button class="btn add-to-cart" type="button">Přidat</button></div></div>
+            </article>
+            <article class="shop-product" data-name="Bílá kšiltovka" data-price="290">
+              <div class="shop-product-image"><img src="images/ksiltovka-bila.jpg" alt="Bílá kšiltovka Mukařovský pes" /><span class="stock-badge">Skladem</span></div>
+              <div class="shop-product-copy"><div class="product-topline"><h3>Bílá kšiltovka</h3><strong>290 Kč</strong></div><p>Světlá nastavitelná varianta s červeným logem.</p><div class="product-buy"><input class="variant" type="hidden" value="Nastavitelná" /><label>Počet<input class="quantity" type="number" min="1" max="10" value="1" aria-label="Počet bílých kšiltovek" /></label><button class="btn add-to-cart" type="button">Přidat</button></div></div>
+            </article>
+          </div>
+
+          <aside class="cart-panel" id="kosik" aria-labelledby="cart-title">
+            <div class="cart-heading"><div><span class="cart-kicker">Vaše objednávka</span><h2 id="cart-title">Košík <span class="cart-count">0</span></h2></div><span aria-hidden="true" class="cart-icon">🛍️</span></div>
+            <div class="cart-empty"><strong>Košík čeká na první kousek.</strong><span>Vyberte produkt a klikněte na „Přidat“.</span></div>
+            <div class="cart-items" aria-live="polite"></div>
+            <div class="cart-total" hidden><span>Celkem</span><strong><span id="cart-total-value">0</span> Kč</strong></div>
+            <form action="dekujeme" method="POST" name="objednavka-merche" id="order-form" data-netlify="true">
+              <input type="hidden" name="form-name" value="objednavka-merche" />
+              <input type="hidden" name="objednavka" id="order-summary" />
+              <input type="hidden" name="celkem" id="order-total" />
+              <p class="netlify-hidden"><label>Nechte prázdné: <input name="bot-field" /></label></p>
+              <div class="form-grid"><label>Jméno a příjmení *<input name="jmeno" autocomplete="name" required placeholder="Jan Novák" /></label><label>E-mail *<input name="email" type="email" autocomplete="email" required placeholder="jan@email.cz" /></label><label>Telefon *<input name="telefon" type="tel" autocomplete="tel" required placeholder="+420 123 456 789" /></label><label>Převzetí *<select name="prevzeti" required><option value="">Vyberte způsob</option><option>Na místě v den akce</option><option>Individuálně po domluvě</option></select></label></div>
+              <label>Poznámka<textarea name="poznamka" rows="3" placeholder="Cokoliv, co bychom měli vědět…"></textarea></label>
+              <label class="consent-row"><input name="zavazny_souhlas" required type="checkbox" /><span>Odesláním vytvářím <strong>závaznou objednávku</strong> vybraného zboží a souhlasím, aby mě pořadatel kontaktoval kvůli platbě a předání. *</span></label>
+              <button class="btn order-submit" type="submit" disabled>Objednat závazně · <span>0 Kč</span></button>
+              <p class="order-note">Platbu a přesný termín předání s vámi potvrdíme e-mailem. Objednávka není pouhou rezervací.</p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-shop"><div class="container"><div class="section-title"><h2>Jak to funguje?</h2><p>Bez anonymní dopravy a složitostí. Merch předáváme osobně.</p></div><div class="shop-steps"><div><span>1</span><h3>Vyberete</h3><p>Varianty i počty kusů vložíte do košíku.</p></div><div><span>2</span><h3>Objednáte</h3><p>Odesláním formuláře vzniká závazná objednávka.</p></div><div><span>3</span><h3>Potvrdíme</h3><p>E-mailem domluvíme platbu a přesné předání.</p></div></div></div></section>
   </main>
-
 <footer id="kontakt">
 <div class="container footer-grid">
 <div>
@@ -223,36 +119,56 @@
 </footer>
 <script>
   (() => {
-    const productSelect = document.getElementById('merch-product');
-    const groups = document.querySelectorAll('.product-options');
-    const productRequirements = {
-      'Tričko Mukařovský pes': ['tshirt-color', 'tshirt-size'],
-      'Kšiltovka Mukařovský pes': ['cap-variant'],
-      'Doplňky Mukařovský pes': ['accessory-package']
+    const cart = [];
+    const itemsElement = document.querySelector('.cart-items');
+    const emptyElement = document.querySelector('.cart-empty');
+    const totalRow = document.querySelector('.cart-total');
+    const totalValue = document.getElementById('cart-total-value');
+    const countElement = document.querySelector('.cart-count');
+    const submitButton = document.querySelector('.order-submit');
+    const summaryInput = document.getElementById('order-summary');
+    const totalInput = document.getElementById('order-total');
+
+    const money = (value) => new Intl.NumberFormat('cs-CZ').format(value);
+    const render = () => {
+      itemsElement.innerHTML = '';
+      let total = 0;
+      let count = 0;
+      cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+        count += item.quantity;
+        const row = document.createElement('div');
+        row.className = 'cart-item';
+        row.innerHTML = `<div><strong>${item.name}</strong><span>${item.variant} · ${item.quantity} ks</span></div><div><strong>${money(item.price * item.quantity)} Kč</strong><button type="button" aria-label="Odebrat ${item.name}">Odebrat</button></div>`;
+        row.querySelector('button').addEventListener('click', () => { cart.splice(index, 1); render(); });
+        itemsElement.appendChild(row);
+      });
+      emptyElement.hidden = cart.length > 0;
+      totalRow.hidden = cart.length === 0;
+      countElement.textContent = count;
+      totalValue.textContent = money(total);
+      submitButton.disabled = cart.length === 0;
+      submitButton.querySelector('span').textContent = `${money(total)} Kč`;
+      summaryInput.value = cart.map((item) => `${item.name} – ${item.variant}, ${item.quantity} ks, ${item.price * item.quantity} Kč`).join(' | ');
+      totalInput.value = `${total} Kč`;
     };
 
-    const toggleGroups = () => {
-      const selectedProduct = productSelect.value;
-      groups.forEach((group) => {
-        const isActive = group.dataset.product === selectedProduct;
-        group.disabled = !isActive;
-        group.classList.toggle('is-active', isActive);
-        group.querySelectorAll('select').forEach((select) => {
-          select.required = false;
-        });
+    document.querySelectorAll('.shop-product').forEach((product) => {
+      product.querySelector('.add-to-cart').addEventListener('click', (event) => {
+        const variantInput = product.querySelector('.variant');
+        const quantityInput = product.querySelector('.quantity');
+        if (!variantInput.value) { variantInput.focus(); variantInput.setCustomValidity('Vyberte prosím variantu.'); variantInput.reportValidity(); return; }
+        variantInput.setCustomValidity('');
+        const quantity = Math.max(1, Math.min(10, Number(quantityInput.value) || 1));
+        const existing = cart.find((item) => item.name === product.dataset.name && item.variant === variantInput.value);
+        if (existing) existing.quantity = Math.min(10, existing.quantity + quantity);
+        else cart.push({ name: product.dataset.name, variant: variantInput.value, quantity, price: Number(product.dataset.price) });
+        render();
+        event.currentTarget.textContent = 'Přidáno ✓';
+        setTimeout(() => { event.currentTarget.textContent = 'Přidat'; }, 1200);
       });
-
-      const requiredFields = productRequirements[selectedProduct] || [];
-      requiredFields.forEach((id) => {
-        const field = document.getElementById(id);
-        if (field) {
-          field.required = true;
-        }
-      });
-    };
-
-    productSelect.addEventListener('change', toggleGroups);
-    toggleGroups();
+    });
+    render();
   })();
 </script>
 </body>
