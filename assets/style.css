@@ -297,6 +297,117 @@
 
     .card p { margin: 0; color: var(--muted); }
 
+    .partner-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .featured-partner-card {
+      order: -1;
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .mapes-card {
+      border-color: rgba(226, 38, 46, 0.32);
+      background:
+        radial-gradient(circle at 100% 0, rgba(226, 38, 46, 0.14), transparent 45%),
+        var(--paper);
+      box-shadow: 0 16px 38px rgba(226, 38, 46, 0.13);
+    }
+
+    .svet-psu-card {
+      grid-template-columns: 168px minmax(0, 1fr);
+      border-color: rgba(218, 34, 42, 0.32);
+      background:
+        radial-gradient(circle at 100% 0, rgba(218, 34, 42, 0.13), transparent 45%),
+        var(--paper);
+      box-shadow: 0 16px 38px rgba(218, 34, 42, 0.12);
+    }
+
+    .partner-logo {
+      display: block;
+      width: 104px;
+      height: 104px;
+      margin-bottom: 0;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(226, 38, 46, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .partner-logo:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(226, 38, 46, 0.28);
+    }
+
+    .partner-logo:focus-visible {
+      outline: 3px solid var(--red);
+      outline-offset: 3px;
+    }
+
+    .partner-logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .svet-psu-card .partner-logo {
+      width: 168px;
+      background: white;
+    }
+
+    .svet-psu-card .partner-logo img {
+      object-fit: contain;
+      padding: 12px;
+    }
+
+    .partner-card-copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .partner-label {
+      margin-bottom: 7px;
+      color: var(--red-dark);
+      font-size: 0.78rem;
+      font-weight: 950;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .partner-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.65rem;
+    }
+
+    .partner-card p {
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    .partner-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      width: fit-content;
+      margin-top: 16px;
+      color: var(--red-dark);
+      font-size: 0.9rem;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .partner-card-link:hover { text-decoration: underline; }
+
     .contact-cards {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -1154,6 +1265,19 @@
       .section-title { display: block; }
       .section-title p { margin-top: 14px; }
       .all-day-program { padding: 20px; }
+      .featured-partner-card {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .partner-logo {
+        width: 88px;
+        height: 88px;
+      }
+      .svet-psu-card .partner-logo {
+        width: 168px;
+        height: 88px;
+      }
       h1 { font-size: 3.2rem; }
     }
   
