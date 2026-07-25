@@ -917,35 +917,162 @@
 
     textarea { min-height: 120px; resize: vertical; }
 
-    .social-bubble {
+    #socialni-site {
+      padding-top: 34px;
+    }
+
+    .social-showcase {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+      gap: 34px;
+      align-items: center;
+      padding: 34px;
+      border: 1px solid rgba(24, 119, 242, 0.16);
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at 0 0, rgba(228, 51, 47, 0.14), transparent 42%),
+        linear-gradient(135deg, #fffaf4, #f3f8ff);
+      box-shadow: 0 20px 55px rgba(19, 54, 96, 0.1);
+    }
+
+    .social-showcase-copy .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 18px;
-      padding: 22px 26px;
-      border-radius: 999px;
-      background: white;
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      font-weight: 950;
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      gap: 9px;
+      color: #145fc1;
     }
 
-    .social-bubble span {
+    .social-showcase-copy h2 {
+      max-width: 470px;
+      margin-top: 14px;
+      font-size: clamp(2.15rem, 4.2vw, 3.7rem);
+    }
+
+    .social-showcase-copy p {
+      max-width: 510px;
+      margin: 20px 0 24px;
       color: var(--muted);
-      font-weight: 900;
+      font-size: 1.04rem;
     }
 
-    .social-bubble strong {
+    .social-follow-button {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      color: var(--text);
+      padding: 13px 19px;
+      border-radius: 16px;
+      background: #1877f2;
+      color: white;
+      font-weight: 950;
+      box-shadow: 0 10px 24px rgba(24, 119, 242, 0.24);
+      transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .social-bubble:hover {
+    .social-follow-button:hover {
       transform: translateY(-2px);
-      border-color: rgba(228,51,47,0.34);
-      box-shadow: 0 18px 36px rgba(228,51,47,0.16);
+      box-shadow: 0 15px 30px rgba(24, 119, 242, 0.3);
+    }
+
+    .social-follow-button:focus-visible,
+    .social-profile-preview:focus-visible {
+      outline: 3px solid #1877f2;
+      outline-offset: 4px;
+    }
+
+    .social-profile-preview {
+      overflow: hidden;
+      display: block;
+      border: 1px solid rgba(23, 23, 23, 0.11);
+      border-radius: 26px;
+      background: white;
+      box-shadow: 0 18px 42px rgba(19, 54, 96, 0.14);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .social-profile-preview:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 50px rgba(19, 54, 96, 0.2);
+    }
+
+    .social-photo-strip {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 3px;
+      height: 190px;
+      background: #e8edf3;
+    }
+
+    .social-photo-strip img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .social-profile-head {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 18px 20px;
+    }
+
+    .social-profile-avatar {
+      width: 58px;
+      height: 58px;
+      flex: 0 0 auto;
+      padding: 5px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: white;
+      object-fit: contain;
+      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
+    }
+
+    .social-profile-name {
+      display: flex;
+      min-width: 0;
+      flex: 1;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .social-profile-name strong {
+      font-size: 1.08rem;
+      letter-spacing: -0.025em;
+    }
+
+    .social-profile-name small {
+      overflow: hidden;
+      margin-top: 4px;
+      color: var(--muted);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .social-platform-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #145fc1;
+      font-size: 0.86rem;
+      font-weight: 950;
+    }
+
+    .social-profile-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .social-profile-note strong {
+      color: #1877f2;
+      font-size: 1.25rem;
     }
 
     .facebook-mark {
@@ -1260,6 +1387,13 @@
       .gallery-preview { padding: 18px; }
       .newsletter { padding: 28px; }
       .newsletter-form { grid-template-columns: 1fr; }
+      .social-showcase {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 24px;
+      }
+      .social-photo-strip { height: 160px; }
+      .social-platform-label { display: none; }
       .time-row { grid-template-columns: 1fr; }
       .route-facts { grid-template-columns: 1fr; }
       .section-title { display: block; }
