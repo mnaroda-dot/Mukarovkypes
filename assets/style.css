@@ -331,6 +331,19 @@
       box-shadow: 0 16px 38px rgba(218, 34, 42, 0.12);
     }
 
+    .sokotime-card {
+      order: -2;
+      grid-column: span 4;
+      grid-template-columns: 210px minmax(0, 1fr);
+      align-items: center;
+      padding: 28px;
+      border-color: rgba(0, 164, 224, 0.3);
+      background:
+        radial-gradient(circle at 100% 0, rgba(0, 164, 224, 0.16), transparent 42%),
+        linear-gradient(135deg, #ffffff, #f1faff);
+      box-shadow: 0 18px 42px rgba(0, 115, 165, 0.13);
+    }
+
     .partner-logo {
       display: block;
       width: 104px;
@@ -367,6 +380,24 @@
     .svet-psu-card .partner-logo img {
       object-fit: contain;
       padding: 12px;
+    }
+
+    .sokotime-card .partner-logo {
+      width: 210px;
+      height: 112px;
+      border: 1px solid rgba(0, 164, 224, 0.16);
+      background: white;
+      box-shadow: 0 12px 28px rgba(0, 115, 165, 0.16);
+    }
+
+    .sokotime-card .partner-logo img {
+      object-fit: contain;
+      padding: 16px;
+    }
+
+    .sokotime-card .partner-label,
+    .sokotime-card .partner-card-link {
+      color: #007caf;
     }
 
     .partner-card-copy {
@@ -407,6 +438,23 @@
     }
 
     .partner-card-link:hover { text-decoration: underline; }
+
+    .partner-services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .partner-services span {
+      padding: 6px 10px;
+      border: 1px solid rgba(0, 164, 224, 0.2);
+      border-radius: 999px;
+      background: rgba(0, 164, 224, 0.08);
+      color: #12627f;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
 
     .contact-cards {
       grid-template-columns: repeat(3, 1fr);
@@ -1371,6 +1419,7 @@
       .menu-toggle-input:checked ~ nav ul { display: flex; }
       .hero-grid, .split, .form-wrap, .route-panel, .all-day-grid { grid-template-columns: 1fr; }
       .cards, .merch-grid, .stats, .gallery-years, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
+      .sokotime-card { grid-column: span 2; }
       .gallery-grid { grid-template-columns: repeat(4, 1fr); }
       .merch-action-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-card { min-height: 420px; }
@@ -1410,6 +1459,14 @@
       }
       .svet-psu-card .partner-logo {
         width: 168px;
+        height: 88px;
+      }
+      .sokotime-card {
+        grid-column: span 1;
+        padding: 22px;
+      }
+      .sokotime-card .partner-logo {
+        width: 190px;
         height: 88px;
       }
       h1 { font-size: 3.2rem; }
