@@ -400,6 +400,70 @@
       color: #007caf;
     }
 
+    .kovobram-card {
+      order: -1;
+      grid-column: span 4;
+      grid-template-columns: 190px minmax(0, 1fr);
+      align-items: center;
+      padding: 28px;
+      border-color: rgba(57, 176, 97, 0.36);
+      background:
+        radial-gradient(circle at 100% 0, rgba(57, 176, 97, 0.18), transparent 42%),
+        linear-gradient(135deg, #ffffff, #f1faf4);
+      box-shadow: 0 18px 42px rgba(25, 112, 56, 0.14);
+    }
+
+    .kovobram-card .partner-logo {
+      width: 170px;
+      height: 170px;
+      border: 1px solid rgba(57, 176, 97, 0.2);
+      background: white;
+      box-shadow: 0 12px 28px rgba(25, 112, 56, 0.17);
+    }
+
+    .kovobram-card .partner-logo img {
+      object-fit: contain;
+    }
+
+    .pintadita-card {
+      grid-template-columns: 210px minmax(0, 1fr);
+      align-items: center;
+      margin-top: 28px;
+      padding: 28px;
+      border-color: rgba(0, 166, 90, 0.36);
+      background:
+        radial-gradient(circle at 100% 0, rgba(0, 166, 90, 0.18), transparent 42%),
+        linear-gradient(135deg, #ffffff, #effaf4);
+      box-shadow: 0 18px 42px rgba(0, 116, 62, 0.14);
+    }
+
+    .pintadita-card .partner-logo {
+      width: 210px;
+      height: 112px;
+      border: 1px solid rgba(0, 166, 90, 0.18);
+      background: white;
+      box-shadow: 0 12px 28px rgba(0, 116, 62, 0.17);
+    }
+
+    .pintadita-card .partner-logo img {
+      object-fit: contain;
+      padding: 16px;
+    }
+
+    .kovobram-card .partner-label,
+    .kovobram-card .partner-card-link,
+    .pintadita-card .partner-label,
+    .pintadita-card .partner-card-link {
+      color: #08763f;
+    }
+
+    .kovobram-card .partner-services span,
+    .pintadita-card .partner-services span {
+      border-color: rgba(0, 150, 78, 0.22);
+      background: rgba(0, 150, 78, 0.09);
+      color: #17623b;
+    }
+
     .partner-card-copy {
       display: flex;
       flex: 1;
@@ -1419,7 +1483,8 @@
       .menu-toggle-input:checked ~ nav ul { display: flex; }
       .hero-grid, .split, .form-wrap, .route-panel, .all-day-grid { grid-template-columns: 1fr; }
       .cards, .merch-grid, .stats, .gallery-years, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
-      .sokotime-card { grid-column: span 2; }
+      .sokotime-card,
+      .kovobram-card { grid-column: span 2; }
       .gallery-grid { grid-template-columns: repeat(4, 1fr); }
       .merch-action-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-card { min-height: 420px; }
@@ -1466,6 +1531,21 @@
         padding: 22px;
       }
       .sokotime-card .partner-logo {
+        width: 190px;
+        height: 88px;
+      }
+      .kovobram-card {
+        grid-column: span 1;
+        padding: 22px;
+      }
+      .kovobram-card .partner-logo {
+        width: 150px;
+        height: 150px;
+      }
+      .pintadita-card {
+        padding: 22px;
+      }
+      .pintadita-card .partner-logo {
         width: 190px;
         height: 88px;
       }
