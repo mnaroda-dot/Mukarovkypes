@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zapojte se | Mukařovský pes</title>
+  <meta name="description" content="Přidejte se k Mukařovskému psu jako dobrovolník, prodejce, partner nebo účinkující." />
+  <meta name="theme-color" content="#e4332f" />
+  <meta property="og:title" content="Zapojte se | Mukařovský pes" />
+  <meta property="og:description" content="Pomozte s organizací, nabídněte stánek, službu nebo doprovodný program." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a aria-label="Mukařovský pes – domů" class="brand" href="/"><img src="images/MukapesLOGO.png" alt="Logo Mukařovský pes" /><span>Mukařovský pes</span></a>
+      <input class="menu-toggle-input" type="checkbox" id="menu-toggle" aria-hidden="true" />
+      <label class="menu-toggle" for="menu-toggle" aria-label="Otevřít hlavní menu">☰</label>
+      <nav aria-label="Hlavní navigace"><ul>
+        <li><a href="/soutez">Soutěž</a></li><li><a href="/discipliny">Disciplíny</a></li><li><a href="/program">Program</a></li><li><a href="/merch">Merch</a></li><li><a href="/galerie">Galerie</a></li><li><a href="/partneri">Partneři</a></li><li><a href="/prihlasky">Přihlášky</a></li><li><a href="/prakticke-informace">Prakticky</a></li><li><a href="/kontakt">Kontakt</a></li>
+      </ul></nav>
+      <a class="btn" href="/prihlasky">Přihlásit se</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div><div class="eyebrow">🤝 Udělejme akci společně</div><h1>Zapojte se.</h1><p class="lead">Hledáme spolehlivé dobrovolníky, zajímavé prodejce, partnery i lidi s nápadem na doprovodný program.</p></div>
+        <aside class="page-hero-card"><strong>Kdy a kde</strong><p><b>12. června 2027</b><br/>Mukařov, Praha-východ<br/><br/>Ozveme se s konkrétními možnostmi spolupráce a organizačními podmínkami.</p></aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="resource-grid">
+          <article class="resource-card"><div class="icon">🙋</div><h3>Dobrovolník</h3><p>Pomoc s registrací, navigací návštěvníků, přípravou areálu, zázemím disciplín nebo úklidem po akci.</p></article>
+          <article class="resource-card"><div class="icon">🛍️</div><h3>Prodejce a stánek</h3><p>Občerstvení, chovatelské potřeby, lokální výrobky nebo služby pro pejskaře. Popište rozměr stánku a technické požadavky.</p></article>
+          <article class="resource-card"><div class="icon">🎤</div><h3>Program a partnerství</h3><p>Ukázka, workshop, dětská aktivita, mediální spolupráce nebo věcná či finanční podpora některé z disciplín.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formular">
+      <div class="container form-wrap">
+        <div class="info-box">
+          <div class="eyebrow">Co nám napište</div>
+          <h2>Stačí stručně.</h2>
+          <ul>
+            <li>o jaký typ spolupráce máte zájem,</li>
+            <li>co můžete nabídnout a co potřebujete,</li>
+            <li>zda jste k dispozici před akcí, v den konání nebo po ní,</li>
+            <li>u stánku také sortiment, rozměry a požadavek na elektřinu či vodu.</li>
+          </ul>
+          <p class="status-note">Odeslání formuláře není automatickým potvrzením účasti. Každou nabídku nejprve společně projdeme.</p>
+        </div>
+        <form action="dekujeme" method="POST" name="zapojte-se" data-netlify="true">
+          <input type="hidden" name="form-name" value="zapojte-se" />
+          <p class="netlify-hidden"><label>Nechte prázdné: <input name="bot-field" /></label></p>
+          <label for="role">Chci se zapojit jako *</label>
+          <select id="role" name="role" required>
+            <option value="">Vyberte možnost</option>
+            <option>Dobrovolník</option><option>Prodejce nebo stánek</option><option>Účinkující nebo doprovodný program</option><option>Partner nebo sponzor</option><option>Jiná spolupráce</option>
+          </select>
+          <label for="jmeno">Jméno nebo organizace *</label><input id="jmeno" name="jmeno" autocomplete="name" required />
+          <label for="email">E-mail *</label><input id="email" name="email" type="email" autocomplete="email" required />
+          <label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" />
+          <label for="nabidka">Jak se chcete zapojit? *</label><textarea id="nabidka" name="nabidka" required placeholder="Popište nabídku, zkušenost a případné technické požadavky."></textarea>
+          <label class="consent-row"><input name="souhlas" required type="checkbox" /><span>Souhlasím, aby mě pořadatel kontaktoval kvůli této nabídce, a potvrzuji, že jsem se seznámil/a s <a href="/ochrana-osobnich-udaju">informacemi o zpracování údajů</a>. *</span></label>
+          <button class="btn" type="submit">Odeslat nabídku</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt"><div class="container footer-grid"><div><img alt="Logo Mukařovský pes" src="images/MukapesLOGO.png"/><h3>Mukařovský pes</h3><p>Celodenní akce pro pejskaře v Mukařově.</p><div class="footer-links"><a href="/prakticke-informace">Praktické informace</a><a href="/zapojte-se">Zapojte se</a><a href="/pro-media">Pro média</a><a href="/ochrana-osobnich-udaju">Soukromí a podmínky</a></div></div><div><strong>Kontakt</strong><br/>e-mail: info@mukarovskypes.com<br/>místo: Mukařov, Praha-východ</div><a class="btn" href="/prihlasky">Přihlásit se</a></div></footer>
+</body>
+</html>
