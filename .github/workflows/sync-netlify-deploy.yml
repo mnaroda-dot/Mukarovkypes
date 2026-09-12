@@ -22,11 +22,9 @@ jobs:
           set -euo pipefail
           BASE_URL="https://mukarovskypes.com"
 
-          rm -f ./*.html ./readme.txt ./README.md
-          rm -rf ./assets ./images
-
           files=(
             "index.html"
+            "soutez.html"
             "canicross.html"
             "dogtrek.html"
             "partneri.html"
@@ -37,10 +35,15 @@ jobs:
             "galerie.html"
             "dekujeme.html"
             "informace.html"
+            "napsali-o-nas.html"
             "readme.txt"
             "misto.html"
             "kontakt.html"
             "program.html"
+            "prakticke-informace.html"
+            "zapojte-se.html"
+            "pro-media.html"
+            "ochrana-osobnich-udaju.html"
             "assets/style.css"
             "images/mukapeslogo.png"
             "images/tricko-cervene.png"
