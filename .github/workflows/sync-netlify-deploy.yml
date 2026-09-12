@@ -2,9 +2,6 @@ name: Sync exact Netlify deploy
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/sync-netlify-deploy.yml'
 
 permissions:
   contents: write

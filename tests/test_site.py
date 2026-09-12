@@ -157,6 +157,8 @@ class SiteIntegrityTests(unittest.TestCase):
     def test_sync_workflow_is_non_destructive_and_covers_all_html_pages(self) -> None:
         workflow_path = ROOT / ".github/workflows/sync-netlify-deploy.yml"
         workflow = workflow_path.read_text(encoding="utf-8")
+        trigger_config = workflow.split("permissions:", maxsplit=1)[0]
+        self.assertNotRegex(trigger_config, r"(?m)^\s+push:", "Sync smí být spuštěn pouze ručně")
         self.assertNotRegex(workflow, r"rm\s+-f\s+\./\*\.html")
         self.assertNotRegex(workflow, r"rm\s+-rf\s+\./(?:assets|images)")
 
