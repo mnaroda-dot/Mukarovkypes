@@ -14,6 +14,7 @@ RESOURCE_PAGES = {
     "pro-media",
     "ochrana-osobnich-udaju",
 }
+EXPECTED_NETLIFY_FORMS = {"novinky", "objednavka-merche", "zapojte-se"}
 
 
 class DocumentParser(HTMLParser):
@@ -122,15 +123,17 @@ class SiteIntegrityTests(unittest.TestCase):
 
     def test_netlify_forms_have_detection_fields_and_valid_action(self) -> None:
         failures: list[str] = []
-        form_count = 0
+        netlify_form_names: set[str] = set()
         for path, document in self.documents.items():
             for form in document.forms:
                 attrs = form["attrs"]
+                form_name = attrs.get("name")
+                if form_name in EXPECTED_NETLIFY_FORMS and attrs.get("data-netlify") != "true":
+                    failures.append(f"{path.name}: formuláři {form_name!r} chybí data-netlify=true")
                 if attrs.get("data-netlify") != "true":
                     continue
-                form_count += 1
+                netlify_form_names.add(form_name)
                 inputs = form["inputs"]
-                form_name = attrs.get("name")
                 hidden_names = {
                     field.get("value")
                     for field in inputs
@@ -148,7 +151,7 @@ class SiteIntegrityTests(unittest.TestCase):
                 if resolved is None or not exact_case_exists(resolved[0]):
                     failures.append(f"{path.name}: formulář {form_name!r} má neplatný action {action!r}")
 
-        self.assertGreater(form_count, 0, "Nebyl nalezen žádný Netlify formulář")
+        self.assertEqual(EXPECTED_NETLIFY_FORMS, netlify_form_names, "Chybí očekávaný Netlify formulář")
         self.assertEqual([], failures, "\n" + "\n".join(failures))
 
     def test_sync_workflow_is_non_destructive_and_covers_all_html_pages(self) -> None:
