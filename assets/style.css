@@ -425,6 +425,42 @@
       object-fit: contain;
     }
 
+    .bergerova-card {
+      grid-column: span 4;
+      grid-template-columns: 250px minmax(0, 1fr);
+      align-items: center;
+      padding: 28px;
+      border-color: rgba(113, 86, 67, 0.32);
+      background:
+        radial-gradient(circle at 100% 0, rgba(176, 142, 112, 0.19), transparent 43%),
+        linear-gradient(135deg, #ffffff, #f9f4ee);
+      box-shadow: 0 18px 42px rgba(85, 61, 45, 0.13);
+    }
+
+    .bergerova-card .partner-logo {
+      width: 250px;
+      height: 135px;
+      border: 1px solid rgba(113, 86, 67, 0.18);
+      background: white;
+      box-shadow: 0 12px 28px rgba(85, 61, 45, 0.14);
+    }
+
+    .bergerova-card .partner-logo img {
+      object-fit: contain;
+      padding: 12px;
+    }
+
+    .bergerova-card .partner-label,
+    .bergerova-card .partner-card-link {
+      color: #75543f;
+    }
+
+    .bergerova-card .partner-services span {
+      border-color: rgba(113, 86, 67, 0.22);
+      background: rgba(176, 142, 112, 0.11);
+      color: #604732;
+    }
+
     .pintadita-card {
       grid-template-columns: 210px minmax(0, 1fr);
       align-items: center;
@@ -1676,7 +1712,8 @@
       .cards, .merch-grid, .stats, .gallery-years, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
       .resource-grid, .press-assets { grid-template-columns: repeat(2, 1fr); }
       .sokotime-card,
-      .kovobram-card { grid-column: span 2; }
+      .kovobram-card,
+      .bergerova-card { grid-column: span 2; }
       .gallery-grid { grid-template-columns: repeat(4, 1fr); }
       .merch-action-grid { grid-template-columns: repeat(2, 1fr); }
       .hero-card { min-height: 420px; }
@@ -1737,6 +1774,14 @@
       .kovobram-card .partner-logo {
         width: 150px;
         height: 150px;
+      }
+      .bergerova-card {
+        grid-column: span 1;
+        padding: 22px;
+      }
+      .bergerova-card .partner-logo {
+        width: min(100%, 250px);
+        height: 124px;
       }
       .pintadita-card {
         padding: 22px;
