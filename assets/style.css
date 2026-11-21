@@ -81,28 +81,27 @@
 
     nav a:hover { color: var(--red); }
 
-    .menu-toggle-input {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: 0;
-      opacity: 0;
-      pointer-events: none;
-    }
-
     .menu-toggle {
       display: none;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      padding: 0 14px;
       border-radius: 16px;
       background: white;
       border: 1px solid var(--line);
       box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      color: var(--text);
       cursor: pointer;
-      font-size: 1.35rem;
-      font-weight: 950;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .menu-toggle:focus-visible,
+    .nav nav a:focus-visible {
+      outline: 3px solid var(--red-dark);
+      outline-offset: 3px;
     }
 
     .netlify-hidden {
@@ -195,6 +194,18 @@
       flex-wrap: wrap;
       gap: 14px;
       align-items: center;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+    }
+
+    .hero-links a {
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .hero-card {
@@ -1688,7 +1699,7 @@
         gap: 12px;
       }
 
-      .menu-toggle { display: inline-flex; }
+      .menu-toggle:not([hidden]) { display: inline-flex; }
 
       .nav > .btn { display: none; }
 
@@ -1698,7 +1709,6 @@
       }
 
       nav ul {
-        display: none;
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
@@ -1712,7 +1722,7 @@
         background: rgba(255,255,255,0.72);
       }
 
-      .menu-toggle-input:checked ~ nav ul { display: flex; }
+      .menu-toggle:not([hidden])[aria-expanded="false"] ~ nav { display: none; }
       .hero-grid, .split, .form-wrap, .route-panel, .all-day-grid, .page-hero-grid { grid-template-columns: 1fr; }
       .cards, .merch-grid, .stats, .gallery-years, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
       .resource-grid, .press-assets { grid-template-columns: repeat(2, 1fr); }

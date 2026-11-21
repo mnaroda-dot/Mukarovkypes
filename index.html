@@ -11,6 +11,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="cs_CZ" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/menu.js" defer></script>
 </head>
 <body>
   <header>
@@ -19,11 +20,9 @@
         <img src="images/mukapeslogo.png" alt="Logo Mukařovský pes" />
         <span>Mukařovský pes</span>
       </a>
-      <input class="menu-toggle-input" type="checkbox" id="menu-toggle" aria-hidden="true" />
-      <label class="menu-toggle" for="menu-toggle" aria-label="Otevřít hlavní menu">☰</label>
-      <nav aria-label="Hlavní navigace">
+      <button type="button" class="menu-toggle" aria-controls="hlavni-navigace" aria-expanded="false" hidden>Menu</button>
+      <nav id="hlavni-navigace" aria-label="Hlavní navigace">
         <ul>
-          <li><a href='/soutez'>Soutěž</a></li>
           <li><a href='/discipliny'>Disciplíny</a></li>
           <li><a href='/program'>Program</a></li>
           <li><a href='/merch'>Merch</a></li>
@@ -42,29 +41,17 @@
 <section class="hero">
 <div class="container hero-grid">
 <div>
-<div class="eyebrow">🐾 12.6.2027 · Celodenní akce pro pejskaře</div>
+<div class="eyebrow">Celodenní akce pro pejskaře</div>
 <h1>Mukařovský pes<br/><span style="font-size:0.4em; font-weight:600; letter-spacing:0;">12. června 2027</span></h1>
 <p class="lead">Den plný pohybu, zábavy, soutěží a chlupaté radosti. Přijďte si zaběhnout, projít trasu, ukázat svého voříška nebo si jen užít pohodový den se psem na louce u obecního úřadu v Mukařově, Praha-východ.</p>
+<p><strong>Pro diváky zdarma a bez registrace.</strong></p>
 <div class="hero-actions">
-<a class='btn' href='/program'>Zobrazit program</a>
-<a class='btn app-download' href='https://mukarovsky-pes-2027.milcus.chatgpt.site' rel='noopener' target='_blank'>📱 Stáhnout aplikaci</a>
-<a class='btn secondary' href='/discipliny'>Vybrat soutěž</a>
-<a class='btn secondary' href='/prakticke-informace'>Praktické informace</a>
+<a class="btn" href="/discipliny">Vybrat disciplínu</a>
+<a class="btn secondary" href="/prakticke-informace">Naplánovat návštěvu</a>
 </div>
-<div aria-label="Aktuální počty přihlášených" class="stats">
-<div class="stat-card">
-<span class="stat-number">2027</span>
-<span class="stat-label">registrace se připravuje</span>
-</div>
-<div class="stat-card">
-<span class="stat-number">4</span>
-<span class="stat-label">disciplíny v programu</span>
-</div>
-<div class="stat-card">
-<span class="stat-number">1</span>
-<span class="stat-label">den plný psí radosti</span>
-</div>
-</div>
+<p class="hero-links"><a href="/program">Zobrazit program</a>
+<a href="https://mukarovsky-pes-2027.milcus.chatgpt.site" rel="noopener" target="_blank">Otevřít aplikaci</a></p>
+<p>Registrace se připravuje.</p>
 </div>
 <div aria-label="Vizuál akce Mukařovský pes" class="hero-card">
 <img alt="Logo Mukařovský pes" class="hero-logo" src="images/mukapeslogo.png"/>
