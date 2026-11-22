@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Letní soutěž o kšiltovky | Mukařovský pes</title>
-  <meta name="description" content="Zapojte se do první soutěže Mukařovského psa a vyhrajte bílou nebo černou kšiltovku. Soutěžíme do 16. srpna 2026." />
+  <title>Podzimní soutěž o kšiltovky 2026 | Mukařovský pes</title>
+  <meta name="description" content="Archiv facebookové soutěže Mukařovského psa o kšiltovky, která skončila 30. září 2026." />
   <meta name="theme-color" content="#e4332f" />
-  <meta property="og:title" content="Facebooková soutěž o kšiltovky | Mukařovský pes" />
-  <meta property="og:description" content="Představte svého psího parťáka, vyberte si bílou nebo černou kšiltovku a přidejte se k naší smečce." />
+  <meta property="og:title" content="Podzimní soutěž o kšiltovky 2026 | Mukařovský pes" />
+  <meta property="og:description" content="Archiv facebookové soutěže Mukařovského psa o kšiltovky, která skončila 30. září 2026." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="cs_CZ" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/menu.js" defer></script>
 </head>
 <body>
   <header>
@@ -19,11 +20,9 @@
         <img src="images/mukapeslogo.png" alt="Logo Mukařovský pes" />
         <span>Mukařovský pes</span>
       </a>
-      <input class="menu-toggle-input" type="checkbox" id="menu-toggle" aria-hidden="true" />
-      <label class="menu-toggle" for="menu-toggle" aria-label="Otevřít hlavní menu">☰</label>
-      <nav aria-label="Hlavní navigace">
+      <button type="button" class="menu-toggle" aria-controls="hlavni-navigace" aria-expanded="false" hidden>Menu</button>
+      <nav id="hlavni-navigace" aria-label="Hlavní navigace">
         <ul>
-          <li><a aria-current="page" class="active" href="/soutez">Soutěž</a></li>
           <li><a href="/discipliny">Disciplíny</a></li>
           <li><a href="/program">Program</a></li>
           <li><a href="/merch">Merch</a></li>
@@ -42,16 +41,16 @@
     <section class="shop-hero">
       <div class="container shop-hero-grid">
         <div>
-          <div class="eyebrow">☀️ První facebooková soutěž</div>
-          <h1>Vyhrajte kšiltovku.<br/>Přidejte se ke smečce.</h1>
-          <p class="lead">Představte nám svého psího parťáka a zahrajte si o jednu bílou a jednu černou kšiltovku Mukařovský pes. Dva výherci, dvě barvy a spousta nových psích známých.</p>
+          <div class="eyebrow">Ukončená soutěž · Archiv</div>
+          <h1>Podzimní soutěž o kšiltovky</h1>
+          <p class="lead">Facebooková soutěž o bílou a černou kšiltovku skončila 30. září 2026 ve 20:00.</p>
           <div class="hero-actions">
-            <a class="btn" href="#jak-se-zapojit">Jak soutěžit ↓</a>
+            <a class="btn" href="/galerie#archiv">Zpět do archivu</a>
             <a class="btn secondary" href="#pravidla">Zobrazit pravidla</a>
           </div>
         </div>
         <div class="shop-hero-photo">
-          <img src="images/ksiltovky.jpeg" alt="Černá kšiltovka Mukařovský pes, jedna z výher v letní soutěži" />
+          <img src="images/ksiltovky.jpeg" alt="Černá kšiltovka Mukařovský pes, jedna z výher v podzimní soutěži" />
           <div class="shop-hero-badge"><strong>2 výherci</strong><span>1× bílá · 1× černá</span></div>
         </div>
       </div>
@@ -62,38 +61,38 @@
         <div class="section-title">
           <div>
             <div class="eyebrow">🐾 Podzimní psí smečka</div>
-            <h2>Jak se zapojit</h2>
+            <h2>Jak soutěž probíhala</h2>
           </div>
-          <p>Soutěž probíhá od zveřejnění soutěžního příspěvku 21. září do 30. září 2026 do 20:00.</p>
+          <p>Soutěž probíhala od zveřejnění soutěžního příspěvku 21. září do 30. září 2026 do 20:00.</p>
         </div>
         <div class="cards">
           <article class="card">
             <div class="icon">🐶</div>
-            <h3>Představte parťáka</h3>
-            <p>Do komentáře pod soutěžním příspěvkem napište, jak se jmenuje váš pes.</p>
+            <h3>Představení parťáka</h3>
+            <p>Soutěžící napsali do komentáře jméno svého psa.</p>
           </article>
           <article class="card">
             <div class="icon">🌲</div>
-            <h3>Sdílejte podzimní radost</h3>
-            <p>Přidejte, co spolu na podzim nejraději podnikáte nebo kam chodíte na výlet.</p>
+            <h3>Podzimní aktivity</h3>
+            <p>Přidali oblíbenou podzimní aktivitu nebo tip na výlet se psem.</p>
           </article>
           <article class="card">
             <div class="icon">⚪</div>
-            <h3>Vyberte barvu</h3>
-            <p>Na konec komentáře napište nebo vložte emoji ⚪ pro bílou či ⚫ pro černou kšiltovku.</p>
+            <h3>Výběr barvy</h3>
+            <p>Volbu barvy uvedli na konci komentáře slovem nebo symbolem ⚪ pro bílou či ⚫ pro černou.</p>
           </article>
           <article class="card">
             <div class="icon">🤝</div>
-            <h3>Poznejte smečku</h3>
-            <p>Projděte si odpovědi ostatních. Třeba objevíte nového parťáka na společné venčení.</p>
+            <h3>Seznámení s komunitou</h3>
+            <p>Účastníci si mohli přečíst příspěvky ostatních pejskařů.</p>
           </article>
         </div>
         <div style="max-width: 680px; margin: 28px auto 0;">
-          <a class="social-profile-preview" href="https://facebook.com/mukarovskypes" rel="noopener noreferrer" target="_blank" aria-label="Otevřít facebookovou stránku Mukařovský pes se soutěžním příspěvkem">
+          <a class="social-profile-preview" href="https://facebook.com/mukarovskypes" rel="noopener noreferrer" target="_blank" aria-label="Otevřít facebookovou stránku Mukařovský pes">
             <div class="social-profile-head">
               <img class="social-profile-avatar" src="images/mukapeslogo.png" alt="Logo Mukařovský pes" loading="lazy" decoding="async" />
               <span class="social-profile-name">
-                <strong>Soutěžte s námi na Facebooku</strong>
+                <strong>Mukařovský pes na Facebooku</strong>
                 <small>@mukarovskypes · Mukařovský pes</small>
               </span>
               <span class="social-platform-label"><span class="facebook-mark" aria-hidden="true">f</span> Facebook</span>
@@ -113,14 +112,13 @@
           <img src="images/ksiltovka-bila.jpg" alt="Bílá kšiltovka Mukařovský pes s červeným logem" />
         </div>
         <div class="info-box">
-          <div class="eyebrow">🎁 Co je ve hře</div>
+          <div class="eyebrow">Ceny v soutěži</div>
           <h2>Dvě barvy.<br/>Dva výherci.</h2>
-          <p>Jednoho výherce vylosujeme z platných komentářů pro bílou variantu a jednoho z komentářů pro černou variantu.</p>
+          <p>Podle pravidel připadla na každou barvu jedna výhra.</p>
           <ul>
             <li><strong>1× bílá kšiltovka</strong> s červeným logem</li>
             <li><strong>1× černá kšiltovka</strong> s logem Mukařovský pes</li>
             <li>obě kšiltovky jsou nastavitelné</li>
-            <li>vyhlášení výherců proběhne 17. srpna 2026</li>
           </ul>
           <div class="location-actions">
             <a class="btn" href="#pravidla">Přečíst úplná pravidla</a>
@@ -141,18 +139,18 @@
             <h3>Základní podmínky</h3>
             <ul>
               <li>Pořadatelem je Mukařovský pes, kontakt: <a href="mailto:info@mukarovskypes.com"><strong>info@mukarovskypes.com</strong></a>.</li>
-              <li>Soutěž probíhá od zveřejnění soutěžního příspěvku 21.9. 2026 do 30.9. 2026 do 20:00.</li>
+              <li>Soutěž probíhala od zveřejnění soutěžního příspěvku 21.9. 2026 do 30.9. 2026 do 20:00.</li>
               <li>Zúčastnit se mohou osoby starší 18 let s kontaktní adresou v České republice.</li>
               <li>Každý soutěžící může být zařazen pouze jednou a může získat nejvýše jednu výhru.</li>
-              <li>Platný komentář musí obsahovat jméno psa, společnou letní aktivitu a volbu bílé nebo černé varianty.</li>
+              <li>Platný komentář musí obsahovat jméno psa, společnou podzimní aktivitu a volbu bílé nebo černé varianty.</li>
               <li>Pořadatel může vyřadit neúplné, duplicitní, urážlivé nebo podvodné příspěvky.</li>
             </ul>
           </div>
           <div class="info-box">
             <h3>Losování a předání</h3>
             <ul>
-              <li>Dne 30.9. 2026 budou náhodně vylosováni dva výherci – jeden pro každou barvu.</li>
-              <li>Výherce oznámíme u soutěžního příspěvku a kontaktujeme soukromou zprávou.</li>
+              <li>Losování dvou výherců, jednoho pro každou barvu, bylo plánováno na 30. září 2026.</li>
+              <li>Podle pravidel měl pořadatel výherce oznámit u soutěžního příspěvku a kontaktovat je soukromou zprávou.</li>
               <li>Pokud se výherce neozve do pěti dnů, může pořadatel vylosovat náhradníka.</li>
               <li>Kontaktní údaje výherců použijeme pouze k domluvě předání výhry a nebudeme je předávat třetím stranám.</li>
               <li>Výhru nelze vyměnit za peníze. Pořadatel si vyhrazuje právo soutěž z vážných důvodů upravit nebo ukončit.</li>

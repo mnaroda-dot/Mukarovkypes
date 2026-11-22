@@ -11,15 +11,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="cs_CZ" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/menu.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container nav">
       <a aria-label="Mukařovský pes – domů" class="brand" href="/"><img src="images/mukapeslogo.png" alt="Logo Mukařovský pes" /><span>Mukařovský pes</span></a>
-      <input class="menu-toggle-input" type="checkbox" id="menu-toggle" aria-hidden="true" />
-      <label class="menu-toggle" for="menu-toggle" aria-label="Otevřít hlavní menu">☰</label>
-      <nav aria-label="Hlavní navigace"><ul>
-        <li><a href="/soutez">Soutěž</a></li><li><a href="/discipliny">Disciplíny</a></li><li><a href="/program">Program</a></li><li><a href="/merch">Merch</a></li><li><a href="/galerie">Galerie</a></li><li><a href="/partneri">Partneři</a></li><li><a href="/prihlasky">Přihlášky</a></li><li><a href="/prakticke-informace">Prakticky</a></li><li><a href="/kontakt">Kontakt</a></li>
+      <button type="button" class="menu-toggle" aria-controls="hlavni-navigace" aria-expanded="false" hidden>Menu</button>
+      <nav id="hlavni-navigace" aria-label="Hlavní navigace"><ul>
+        <li><a href="/discipliny">Disciplíny</a></li><li><a href="/program">Program</a></li><li><a href="/merch">Merch</a></li><li><a href="/galerie">Galerie</a></li><li><a href="/partneri">Partneři</a></li><li><a href="/prihlasky">Přihlášky</a></li><li><a href="/prakticke-informace">Prakticky</a></li><li><a href="/kontakt">Kontakt</a></li>
       </ul></nav>
       <a class="btn" href="/prihlasky">Přihlásit se</a>
     </div>
